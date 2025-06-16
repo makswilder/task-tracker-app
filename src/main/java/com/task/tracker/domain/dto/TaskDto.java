@@ -1,7 +1,7 @@
-package com.task.tracker.dto;
+package com.task.tracker.domain.dto;
 
-import com.task.tracker.entities.TaskPriority;
-import com.task.tracker.entities.TaskStatus;
+import com.task.tracker.domain.entities.TaskPriority;
+import com.task.tracker.domain.entities.TaskStatus;
 
 import java.time.LocalDateTime;
 import java.util.UUID;

@@ -1,4 +1,4 @@
-package com.task.tracker.entities;
+package com.task.tracker.domain.entities;
 
 public enum TaskStatus {
     OPEN,

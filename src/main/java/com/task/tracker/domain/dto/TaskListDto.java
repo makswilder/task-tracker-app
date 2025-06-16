@@ -1,4 +1,4 @@
-package com.task.tracker.dto;
+package com.task.tracker.domain.dto;
 
 import java.util.List;
 import java.util.UUID;
