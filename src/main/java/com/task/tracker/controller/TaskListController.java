@@ -1,11 +1,10 @@
 package com.task.tracker.controller;
 
 import com.task.tracker.domain.dto.TaskListDto;
+import com.task.tracker.domain.entities.TaskList;
 import com.task.tracker.mapper.TaskListMapper;
 import com.task.tracker.service.TaskListService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -26,4 +25,13 @@ public class TaskListController {
                 .stream().map(taskListMapper::toDto)
                 .toList();
     }
+
+    @PostMapping
+    public TaskListDto createTaskList(@RequestBody TaskListDto taskListDto) {
+        TaskList createdTaskList = taskListService.createTaskList(
+                taskListMapper.fromDto(taskListDto)
+        );
+        return taskListMapper.toDto(createdTaskList);
+    }
+
 }
