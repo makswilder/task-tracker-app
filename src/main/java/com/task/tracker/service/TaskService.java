@@ -9,4 +9,5 @@ import java.util.UUID;
 @Service
 public interface TaskService {
     List<Task> listTasks(UUID taskListId);
+    Task createTask(UUID taskListId, Task task);
 }
